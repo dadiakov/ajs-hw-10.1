@@ -10,6 +10,6 @@ export default class GameSavingLoader {
     }).then((response) => new Promise((resolve, reject) => {
       resolve(json(response));
     // eslint-disable-next-line no-console
-    })).catch((e) => console.log(e));
+    })).catch((error) => console.log(error.message));
   }
 }
