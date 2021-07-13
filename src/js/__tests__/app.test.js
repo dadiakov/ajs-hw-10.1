@@ -11,9 +11,11 @@ test('should return object', () => GameSavingLoader.load().then((data) => {
   });
 }));
 
-test('should return object', () => GameSavingLoader.load().then(() => new Promise((resolve, reject) => reject(new Error('Ошибка JSON файла')))).catch((data) => {
-  expect(data.message).toBe('Ошибка JSON файла');
-}));
+test('should return object', () => GameSavingLoader.load()
+  .then(() => new Promise((resolve, reject) => reject(new Error('Ошибка JSON файла'))))
+  .catch((data) => {
+    expect(data.message).toBe('Ошибка JSON файла');
+  }));
 
 test('gamesaving create object', () => {
   const save = new GameSaving();
