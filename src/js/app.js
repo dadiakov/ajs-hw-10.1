@@ -1,3 +1,5 @@
-import GameSavingLoader from "./gamesaving";
+/* eslint-disable no-console */
+import GameSaving from './gamesaving';
 
-GameSavingLoader.load().then(response => console.log(response), error => console.log(error));
+const save = new GameSaving();
+console.log(save);
